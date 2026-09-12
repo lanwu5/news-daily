@@ -7,7 +7,7 @@ import feedparser
 import json
 import hashlib
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 # ========== 新闻源配置 ==========
@@ -146,6 +146,17 @@ def main():
     md_content = generate_markdown(all_data)
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(md_content)
+
+    # 按日归档（北京时间日期），累积历史数据
+    beijing_now = datetime.now(timezone(timedelta(hours=8)))
+    day_str = beijing_now.strftime("%Y%m%d")
+    archive_dir = OUTPUT_DIR / "archives"
+    archive_dir.mkdir(exist_ok=True)
+    with open(archive_dir / f"news_{day_str}.json", "w", encoding="utf-8") as f:
+        json.dump(json_data, f, ensure_ascii=False, indent=2)
+    with open(archive_dir / f"news_{day_str}.md", "w", encoding="utf-8") as f:
+        f.write(md_content)
+    print(f"   归档: archives/news_{day_str}.json / .md")
 
     # 统计
     total = sum(len(v) for v in all_data.values())

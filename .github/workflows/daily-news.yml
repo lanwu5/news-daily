@@ -32,6 +32,7 @@ jobs:
           git config --global user.name "News Bot"
           git config --global user.email "news-bot@github.com"
           git add news.json news.md
+          git add archives 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "没有新内容，跳过提交"
           else
