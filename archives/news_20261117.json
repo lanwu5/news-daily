@@ -1,0 +1,53 @@
+{
+  "updated": "2026-11-16T21:44:10.717437+00:00",
+  "sources": {
+    "reuters": {
+      "name": "Reuters",
+      "name_cn": "路透社",
+      "count": 0,
+      "articles": []
+    },
+    "bloomberg": {
+      "name": "Bloomberg",
+      "name_cn": "彭博社",
+      "count": 0,
+      "articles": []
+    },
+    "wsj": {
+      "name": "Wall Street Journal",
+      "name_cn": "华尔街日报",
+      "count": 0,
+      "articles": []
+    },
+    "ft": {
+      "name": "Financial Times",
+      "name_cn": "金融时报",
+      "count": 0,
+      "articles": []
+    },
+    "cnbc": {
+      "name": "CNBC",
+      "name_cn": "CNBC",
+      "count": 0,
+      "articles": []
+    },
+    "scmp": {
+      "name": "South China Morning Post",
+      "name_cn": "南华早报",
+      "count": 0,
+      "articles": []
+    },
+    "marketwatch": {
+      "name": "MarketWatch",
+      "name_cn": "MarketWatch",
+      "count": 0,
+      "articles": []
+    },
+    "yahoofinance": {
+      "name": "Yahoo Finance",
+      "name_cn": "雅虎财经",
+      "count": 0,
+      "articles": []
+    }
+  }
+}
